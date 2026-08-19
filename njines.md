@@ -1,5 +1,4 @@
 # About Me
-- This was made using the README.md that was already in this folder
 
 - **Name:** Nathaniel Jines
 - **UT NetID:** `njines`
