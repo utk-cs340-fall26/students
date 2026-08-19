@@ -1,28 +1,28 @@
 # About Me
 
-- **Name:** Joseph Bronyah
-- **Preferred Name:** Joseph
-- **UT NetID:** `jbronyah`
-- **GitHub Username:** `jbronyah`
-- **Major:** Computer Science (Ph.D.)
+- **Name:** Connor Bedillion
+- **Preferred Name:** Connor
+- **UT NetID:** `cbedilli`
+- **GitHub Username:** `cbedilli`
+- **Major:** Computer Engineering
 
 ---
 
 ## Background
 
-I am currently a Ph.D. student in Computer Science at the University of Tennessee, Knoxville. My background involves research in quantum software engineering.
+I am a senior undergraduate Computer Engineering student.
+I have background in software development, circuit prototyping/building, microcontroller programming, embedded systems, basic web development, and networking.
 
 ---
 
 ## Interests & Hobbies
 
-In my research, I focus on the intersection of quantum computing and software engineering. Outside of academics, I enjoy outdoor activities and playing recreational sports like pickleball at [Lakeshore Park](https://www.lakeshoreparkknoxville.org/).
+Outside of school, my main hobby is music. I play live, record and mix songs with my band. My preferred DAW is [Reaper](https://www.reaper.fm/). I also play games in my free time; my favorite as of recently is Deadlock.
 
 ---
 
 ## Technical Skills & Familiar Tools
 
-- **Programming Languages:** Python, C/C++, SQL, Bash
-- **Quantum Computing Frameworks:** Qiskit, PennyLane
-- **Machine Learning & NLP:** PyTorch, Transformers, Hugging Face
-- **Development & System Tools:** Git, GitHub, Linux/Unix, Conda, Slurm
+- **Programming Languages:** Python, C++, JavaScript
+- **Web Development/Server** HTML, CSS, JavaScript
+- **Development** Linux/Unix, Raspberry Pi
