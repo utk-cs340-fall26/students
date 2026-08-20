@@ -16,7 +16,7 @@ I am an undergrad student currently trying to get a major in comp sci with focus
 
 ## Interests & Hobbies
 
-I love to play video games! I also like making art in Blender and Clip Studio Paint. I am very interested in neuromorphic computing, machine learning (in the medical / exploration fields), and video game design! Here is a link to one of my favorite video games ever: https://www.terraria.org/, and a link to Blender's website: https://www.blender.org/ 
+I love to play video games! I also like making art in Blender and Clip Studio Paint. I am very interested in neuromorphic computing, machine learning (in the medical / exploration fields), and video game design! Here is a link to one of my favorite video games ever: https://www.terraria.org/, a html with a note on how much i like the game: https://github.com/obrewer-UTK/students/blob/main/terraria, and a link to Blender's website: https://www.blender.org/ 
 
 ---
 
