@@ -1,8 +1,8 @@
 # About Me
 
 - **Name:** Addy Holton
-- **NetID:** 'aholton3'
-- **Github Username:** 'addyholton'
+- **NetID:** `aholton3`
+- **Github Username:** `addyholton`
 - **Major:** Computer Science
 
 ---
