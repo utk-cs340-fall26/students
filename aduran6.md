@@ -15,7 +15,7 @@ I am currently an undergratuate student studying computer science at the Univers
 ---
 
 ## Interests & Hobbies
-Other than coding, in my free time I like to read online books and [novels] (https://www.webnovel.com/stories), generally in the fantasy genre. I also enjoy binge wathing a tv show or movie series with some snacks.
+Other than coding, in my free time I like to read online books and [novels](https://www.webnovel.com/stories), generally in the fantasy genre. I also enjoy binge wathing a tv show or movie series with some snacks.
 
 ---
 
