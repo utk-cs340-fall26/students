@@ -1,9 +1,9 @@
 ## <u>About Me</u>
-Name: Jalen Brooks
-Preferred Name: Jalen
-UT NetID: jbrook92
-Github Username: jalenb947
-Major: Computer Science
+- Name: Jalen Brooks
+- Preferred Name: Jalen
+- UT NetID: jbrook92
+- Github Username: jalenb947
+- Major: Computer Science
 
 ## <u>Background</u>
 I am currently an undergraduate student studying Computer Science. I am very interested in learning more about cybersecurity
