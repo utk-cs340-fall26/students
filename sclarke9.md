@@ -25,3 +25,10 @@ Within the tech realm, I really enjoy building software that I know people will 
 - **Programming Languages:** C/C++, C#, SQL, Java
 - **Frameworks:** ASP.NET Core, EF Core, Dapper, Blazor
 - **Development & System Tools:** Git, GitHub, Linux, BitBucket, Azure DevOps, PgAdmin, Docker
+
+---
+
+## My Website and LinkedIn! 
+
+- **Website:** https://sullivanclarke.com/
+- **LinkedIn:** https://www.linkedin.com/in/sullivan-clarke/
