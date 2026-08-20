@@ -1,6 +1,7 @@
 # About Me
 
 - **Name:** Kush Patel
+- **Name I Go By:** Kush
 - **UT NetID:** `kpate139`
 - **GitHub Username:** `kpate139`
 - **Major:** Computer Science
@@ -17,7 +18,7 @@ I am currently an undergraduate student at the University of Tennessee at Knoxvi
 
 Previously, I have done some research about the security vulnerabilities of traffic signal controllers.
 One of my biggest interests and hobbies is playing chess.
-I play chess here: https://www.chess.com/
+I play chess on [Chess.com](https://www.chess.com/).
 
 ---
 
