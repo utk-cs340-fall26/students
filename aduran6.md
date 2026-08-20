@@ -1,7 +1,6 @@
 # About Me
 
 - **Name:** Avrome Duran
-- **Preferred Name:** Joseph
 - **UT NetID:** `aduran6`
 - **GitHub Username:** `ADuran531`
 - **Major:** Computer Science
