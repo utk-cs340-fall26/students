@@ -1,28 +1,28 @@
 # About Me
 
-- **Name:** Joseph Bronyah
-- **Preferred Name:** Joseph
-- **UT NetID:** `jbronyah`
-- **GitHub Username:** `jbronyah`
-- **Major:** Computer Science (Ph.D.)
+- **Name:** Hunter Richards
+- **Preferred Name:** Cian
+- **UT NetID:** `hricha24`
+- **GitHub Username:** `endernuke7`
+- **Major:** Computer Science
 
 ---
 
+
 ## Background
 
-I am currently a Ph.D. student in Computer Science at the University of Tennessee, Knoxville. My background involves research in quantum software engineering.
+I am currently an undergrad student in Computer Science at the University of Tennessee, Knoxville. I have experience in computer programming, hands-on engineering projects, and leadership through Air Force ROTC. My coursework includes programming, data structures, algorithms, computer methodology, mathematics, and physics.
 
 ---
 
 ## Interests & Hobbies
 
-In my research, I focus on the intersection of quantum computing and software engineering. Outside of academics, I enjoy outdoor activities and playing recreational sports like pickleball at [Lakeshore Park](https://www.lakeshoreparkknoxville.org/).
+My interests include computer science and cybersecurity. I am particularly interested in developing my programming and cybersecurity skills through academic projects and hands on experience. Outside of academics, I enjoy activities that involve leadership, teamwork, and problem solving. Outside of this, I spend the rest of my time playing shooters, such as [PUBG](https://pubg.com/en/game-info/overview).
 
 ---
 
 ## Technical Skills & Familiar Tools
 
-- **Programming Languages:** Python, C/C++, SQL, Bash
-- **Quantum Computing Frameworks:** Qiskit, PennyLane
-- **Machine Learning & NLP:** PyTorch, Transformers, Hugging Face
-- **Development & System Tools:** Git, GitHub, Linux/Unix, Conda, Slurm
+- **Programming Languages:** C++, Java, JavaScript, HTML
+- **Development & System Tools:** Git, GitHub, Linux
+- **Quantum Computing Frameworks:** N/A
