@@ -8,7 +8,7 @@ I am from Clarksville. I attended West Creek High School before coming to UTK.
 ## Interests
 I enjoy playing video games, watching YouTube, and cooking
 ### Linkdin
-[My Linkdin](www.linkedin.com/in/darin-harris-56231838a)
+[My Linkdin](https://www.linkedin.com/in/darin-harris-56231838a)
 ## Computer Languages
 - C++
 - Excel
