@@ -1,0 +1,131 @@
+name: PR Rubric Checker & Auto-Merge
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - '**/*.md'
+
+jobs:
+  check-and-merge:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write # Required to perform the merge operation
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Get changed files
+        id: changed-files
+        run: |
+          # Get list of added/modified markdown files in the PR
+          FILES=$(git diff --name-only origin/${{ github.base_ref }} HEAD | grep '\.md$' || true)
+          echo "files<<EOF" >> $GITHUB_OUTPUT
+          echo "$FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Verify Rubric
+        id: verify
+        shell: python
+        run: |
+          import os
+          import re
+          import sys
+
+          files_str = """${{ steps.changed-files.outputs.files }}"""
+          files = [f.strip() for f in files_str.strip().split('\n') if f.strip()]
+
+          if not files:
+              print("No markdown files modified.")
+              sys.exit(0)
+
+          failed_files = {}
+
+          for file_path in files:
+              if not os.path.exists(file_path):
+                  continue
+              
+              with open(file_path, 'r', encoding='utf-8') as f:
+                  content = f.read()
+
+              errors = []
+              
+              # 1. At least 1 header present
+              if not re.search(r'(^|\n)#+\s+\S+', content):
+                  errors.append("Missing at least one markdown header (e.g., `# Background`).")
+
+              # 2. At least 1 ordered/unordered list present
+              if not re.search(r'(^|\n)(\s*[-*+]\s+\S+|\s*\d+\.\s+\S+)', content):
+                  errors.append("Missing at least one ordered or unordered list.")
+
+              # 3. At least 1 URL present
+              if not re.search(r'https?://[^\s)\]]+', content):
+                  errors.append("Missing at least one URL link.")
+
+              if errors:
+                  failed_files[file_path] = errors
+
+          if failed_files:
+              comment_body = "### ❌ PR Rubric Check Failed\n\nPlease fix the following issues before this PR can be merged:\n\n"
+              for file, errors in failed_files.items():
+                  comment_body += f"**File:** `{file}`\n"
+                  for error in errors:
+                      comment_body += f"- {error}\n"
+                  comment_body += "\n"
+              
+              with open('comment.txt', 'w') as f:
+                  f.write(comment_body)
+              
+              print("Rubric verification failed.")
+              sys.exit(1)
+          else:
+              print("All files passed the rubric successfully!")
+
+      - name: Comment PR on Failure
+        if: failure() && steps.verify.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('comment.txt', 'utf8');
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body
+            });
+
+      - name: Automatically Merge PR on Success
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              // Optional: Add a comment stating it passed validation
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: "### ✅ PR Rubric Check Passed\n\nAutomatically merging this pull request."
+              });
+
+              // Merge the Pull Request
+              await github.rest.pulls.merge({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.issue.number,
+                merge_method: 'squash' // Options: 'merge', 'squash', 'rebase'
+              });
+              console.log("PR merged successfully!");
+            } catch (error) {
+              core.setFailed(`Auto-merge failed: ${error.message}`);
+            }
