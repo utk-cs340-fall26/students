@@ -1,7 +1,7 @@
 name: PR Rubric Checker & Auto-Merge
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize, reopened, labeled]
     paths:
       - '**/*.md'
@@ -11,12 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
-      contents: write # Required to perform the merge operation
+      contents: write
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
+          # Crucial:This securely checks out the code from the incoming PR branch
+          ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
 
       - name: Set up Python
@@ -27,8 +29,9 @@ jobs:
       - name: Get changed files
         id: changed-files
         run: |
-          # Get list of added/modified markdown files in the PR
-          FILES=$(git diff --name-only origin/${{ github.base_ref }} HEAD | grep '\.md$' || true)
+          # Use the explicit base ref to correctly diff against the PR head
+          git fetch origin ${{ github.event.pull_request.base.ref }}
+          FILES=$(git diff --name-only origin/${{ github.event.pull_request.base.ref }} HEAD | grep '\.md$' || true)
           echo "files<<EOF" >> $GITHUB_OUTPUT
           echo "$FILES" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
@@ -110,7 +113,6 @@ jobs:
         with:
           script: |
             try {
-              // Optional: Add a comment stating it passed validation
               await github.rest.issues.createComment({
                 issue_number: context.issue.number,
                 owner: context.repo.owner,
@@ -118,12 +120,11 @@ jobs:
                 body: "### ✅ PR Rubric Check Passed\n\nAutomatically merging this pull request."
               });
 
-              // Merge the Pull Request
               await github.rest.pulls.merge({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 pull_number: context.issue.number,
-                merge_method: 'squash' // Options: 'merge', 'squash', 'rebase'
+                merge_method: 'squash'
               });
               console.log("PR merged successfully!");
             } catch (error) {
