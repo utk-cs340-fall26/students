@@ -10,8 +10,7 @@ I am currently an undergraduate student studying Computer Science. I am very int
 in order to learn how to defend critical infrastructure.
 
 ## <u>Interests & Hobbies</u>
-Outside of academics, I really enjoy lifting and fitness overall. I also enjoy playing pickleball, video games, and going on hikes with
-friends. 
+[Link](jbrook92.html)
 
 ## <u>Technical Skills</u>
 	•	Programming Languages: Python, C++, Java, React
