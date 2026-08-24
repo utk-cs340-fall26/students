@@ -2,15 +2,15 @@
 - Name: Jalen Brooks
 - Preferred Name: Jalen
 - UT NetID: jbrook92
-- Github Username: jalenb947
 - Major: Computer Science
+- [My GitHub](https://github.com/jalenb947)
 
 ## <u>Background</u>
 I am currently an undergraduate student studying Computer Science. I am very interested in learning more about cybersecurity
 in order to learn how to defend critical infrastructure.
 
 ## <u>Interests & Hobbies</u>
-[Link](jbrook92.html)
+Outside of academics, I really enjoy lifting and fitness overall. I also enjoy playing pickleball, video games, and going on hikes with friends.
 
 ## <u>Technical Skills</u>
 	•	Programming Languages: Python, C++, Java, React
